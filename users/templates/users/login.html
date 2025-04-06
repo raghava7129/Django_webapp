@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Login</legend>
+                {{ form.as_p }}
+            </fieldset>
+            <button type="submit">Login</button>
+        </form>
+
+        <div>
+            <small>
+                Don't have an account? <a href="#">Register</a>
+            </small>
+
+            <small>
+                Forgot password? <a href="#">Reset password</a>
+            </small> 
+        </div>
+
+{% endblock content %}
